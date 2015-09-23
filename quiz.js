@@ -82,6 +82,7 @@ function NBQuiz() {
         if (this.total === this.config.questions) {
             $('form#quiz input[type=submit]').val('Restart').focus();
             $('form#quiz').off('submit').submit($.proxy(this.init, this));
+            $('#end').show();
         } else {
             $('form#quiz input[type=submit]').val('Continue').focus();
         }
@@ -139,6 +140,8 @@ function NBQuiz() {
         this.total = 0;
         this.perct = 0;
         this.config = null;
+        $('#anscorrect, #ansincorrect, #end, #percentage, #progress, #question').hide();
+        return false;
     };
     
     this.start = function (difficulty) {
