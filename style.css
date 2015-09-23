@@ -35,11 +35,9 @@ p { margin: 0.5em 0 0.5em 0; }
     font-weight: bold; font-size: 105%; }
 #anscorrect { border-color: #090; font-weight: bold; }
 
-
+#question span, #start label > span, #nojs, #end { font-weight: bold; }
 
 
 .clear { clear: both; }
-
-#question span, #start label > span { font-weight: bold; }
 
 .hide { display: none; }
