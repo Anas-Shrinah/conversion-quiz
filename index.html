@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<!--
+    index.html - Quiz content
+
+    Author: Steve Kerrison <forename.surname@bristol.ac.uk>
+    Copyright: Steve Kerrison 2015
+    License: MIT, see bundled LICENSE file
+-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Number base conversion quiz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="quiz.js"></script>
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="author" content="Steve Kerrison" />
+    <meta name="copyright" content="Copyright &copy; Steve Kerrison 2015" />
+    <meta name="license" content="MIT license, see LICENSE text file" />
+</head>
+<body>
+    <section>
+        <h1>Number base conversion quiz</h1>
+        
+        <p>This quiz provides a range of base conversion exercises to help you understand different bases and how to translate between them. There are several difficulty levels, as well as an infinite mode, that runs forever, calculating a continuous percentage score.</p>
+        
+        <p>If you get an answer wrong, the correct answer will be given.</p>
+        
+        <p>Remember that sometimes, converting to an <em>intermediate base</em> may help make a conversion easier.</p>
+        
+        <form id="quiz">
+            <p id="nojs">You need JavaScript to play this quiz</p>
+            <div id="start" class="hide">
+                <p>Select a difficulty level:</p>
+                
+                <div><input type="radio" id="simple" name="difficulty" value="simple" />
+                <label for="simple"><span>Simple</span>. 20 questions, max six digits, bases ten and two.</label></div>
+                
+                <div><input type="radio" id="medium" name="difficulty" value="medium" />
+                <label for="medium"><span>Medium</span>. 20 questions, max six digits, bases 16, 10 and 2.</label></div>
+                
+                <div><input type="radio" id="hard" name="difficulty" value="hard" />
+                <label for="hard"><span>Hard</span>. 30 questions, max eight digits, bases 16, 10 and 2.</label></div>
+                
+                <div><input type="radio" id="infinite" name="difficulty" value="infinite" />
+                <label for="infinite"><span>Infinite</span>. Continuous questions, max twelve digits, a variety of standard and exotic bases (2&ndash;36).</label></div>
+            </div>
+            <div id="question" class="hide">
+                <h2>Question <span id="qno"></span><span id="qof"></span></h2>
+                <p>What is the base-<span id="orig"></span> value <span id="val"></span> when converted to base-<span id="base"></span>? <br />
+                Use <span id="ndigit"></span> digits and <span id="sign"></span> representation.</p>
+                <label for="conversion">Your answer: </label><input type="text" id="conversion" name="conversion" size="12" />
+                <input type="submit" id="submit" value="Check" />
+            </div>
+            <div id="ansincorrect" class="hide">
+                <p class="answer">Incorrect! The answer is <span></span>.</p>
+                <p class="hint"></p>
+            </div>
+            <div id="anscorrect" class="hide">
+                <p>Correct!</p>
+            </div>
+            <div id="progress" class="hide">
+                <p>You have correctly answered <span id="correct">0</span> out of <span id="total">0</span> questions correctly.</p>
+                <p id="percentage" class="hide">Percentage score: <span>...</span></p>
+            </div>
+        </form>
+    </section>
+    
+    <footer>
+        Copyright &copy; Steve Kerrison, 2015. <a href="LICENSE">MIT License</a>.
+    </footer>
+</body>
+</html>
