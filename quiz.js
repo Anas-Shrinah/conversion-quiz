@@ -61,7 +61,7 @@ function NBQuiz() {
         this.total += 1;
         
         /* Ensure guess is formatted as requested */
-        var guess = $('#conversion').val();
+        var guess = $('#conversion').val().trim();
         var answer = this.toBaseString(this.value, this.to);
         if (guess === answer) {
             $('#anscorrect').show();
