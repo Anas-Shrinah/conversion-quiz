@@ -31,7 +31,7 @@ function NBQuiz() {
         },
         'infinite': {
             'questions':    0,
-            'bases':        [2, 8, 10, 16, 32, 36],
+            'bases':        [2, 8, 10, 16],
             'pow':          12,
             'signed':       true
         }
